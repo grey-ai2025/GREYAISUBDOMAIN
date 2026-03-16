@@ -1,0 +1,1230 @@
+  .gai-fm *, .gai-fm *::before, .gai-fm *::after {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+
+  .gai-fm {
+    --gai-charcoal: #1a1e2e;
+    --gai-charcoal-soft: #2a2e3e;
+    --gai-grey-dark: #3a3f50;
+    --gai-grey-mid: #7a7f8e;
+    --gai-grey-light: #b0b4bf;
+    --gai-off-white: #f8f8f6;
+    --gai-black: #1a1a1a;
+    --gai-dark: #434343;
+    --gai-white: #ffffff;
+    --gai-cyan: #ADFBF6;
+    --gai-teal: #4DD0C8;
+    --gai-teal-dark: #3cb8b0;
+    --gai-teal-muted: #3ea8a2;
+    --gai-teal-glow: rgba(77, 208, 200, 0.12);
+    --gai-font: 'Avenir', 'Avenir Next', 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    font-family: var(--gai-font);
+    color: var(--gai-charcoal);
+    background: var(--gai-white);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  /* ══════════════════════════════════════
+     HERO — Dark section (matches Testimonials dark pattern)
+     ══════════════════════════════════════ */
+  .gai-fm__hero {
+    background: var(--gai-charcoal);
+    padding: 80px 24px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gai-fm__hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(77,208,200,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .gai-fm__hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .gai-fm__hero-wordmark {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .gai-fm__hero-wordmark svg {
+    height: 32px;
+    width: auto;
+  }
+
+  .gai-fm__hero-title {
+    font-family: var(--gai-font) !important;
+    font-size: clamp(2rem, 4vw, 2.6rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    color: #ffffff !important;
+    margin-bottom: 20px !important;
+    letter-spacing: -0.01em;
+  }
+
+  .gai-fm__hero-title strong {
+    font-weight: 800 !important;
+  }
+
+  .gai-fm__hero-sub {
+    font-family: var(--gai-font) !important;
+    font-size: 1.05rem !important;
+    color: var(--gai-grey-light) !important;
+    line-height: 1.7 !important;
+    max-width: 600px;
+    margin: 0 auto 32px !important;
+  }
+
+  .gai-fm__hero-deadline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--gai-font);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gai-cyan);
+  }
+
+  .gai-fm__hero-deadline::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gai-cyan);
+    animation: gai-fm-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes gai-fm-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ══════════════════════════════════════
+     PROOF BAR (matches Full Suite proof bar)
+     ══════════════════════════════════════ */
+  .gai-fm__proof {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .gai-fm__proof-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--gai-font);
+    font-size: 0.78rem;
+    color: var(--gai-grey-mid);
+  }
+
+  .gai-fm__proof-icon {
+    width: 36px; height: 36px; min-width: 36px;
+    border-radius: 10px;
+    background: var(--gai-white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gai-fm__proof-icon svg {
+    width: 16px; height: 16px;
+    color: var(--gai-teal);
+  }
+
+  .gai-fm__proof-strong {
+    font-weight: 500;
+    color: var(--gai-charcoal);
+    display: block;
+  }
+
+  .gai-fm__proof-div {
+    width: 1px; height: 24px;
+    background: rgba(0,0,0,0.08);
+  }
+
+  /* ══════════════════════════════════════
+     BENEFITS — Cards with teal accent bar (matches Measured Outcomes)
+     ══════════════════════════════════════ */
+  .gai-fm__benefits {
+    padding: 50px 24px 100px;
+    background: var(--gai-white);
+  }
+
+  .gai-fm__benefits-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .gai-fm__benefits-header {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 64px;
+  }
+
+  .gai-fm__benefits-wordmark {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .gai-fm__benefits-wordmark svg {
+    height: 32px;
+    width: auto;
+  }
+
+  .gai-fm__benefits-title {
+    font-family: var(--gai-font) !important;
+    font-size: clamp(2.4rem, 5vw, 3.2rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    color: var(--gai-charcoal) !important;
+    margin-bottom: 28px !important;
+    letter-spacing: -0.01em;
+  }
+
+  .gai-fm__benefits-title strong {
+    font-weight: 800 !important;
+  }
+
+  .gai-fm__benefits-sub {
+    font-family: var(--gai-font) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    color: var(--gai-dark) !important;
+    max-width: 680px;
+    margin: 0 auto !important;
+  }
+
+  .gai-fm__benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .gai-fm__benefit-card {
+    background: var(--gai-white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 8px 24px rgba(0,0,0,0.04);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .gai-fm__benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    background: var(--gai-teal);
+    border-radius: 16px 0 0 16px;
+  }
+
+  .gai-fm__benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 12px 32px rgba(0,0,0,0.08);
+    border-color: rgba(77,208,200,0.2);
+  }
+
+  .gai-fm__benefit-card-inner {
+    padding: 32px 28px;
+  }
+
+  .gai-fm__benefit-icon {
+    width: 32px; height: 32px; min-width: 32px;
+    border-radius: 10px;
+    background: var(--gai-teal-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .gai-fm__benefit-icon svg {
+    width: 14px; height: 14px;
+    color: var(--gai-teal-muted);
+  }
+
+  .gai-fm__benefit-heading {
+    font-family: var(--gai-font) !important;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: var(--gai-charcoal) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .gai-fm__benefit-desc {
+    font-family: var(--gai-font) !important;
+    font-size: 0.88rem !important;
+    color: var(--gai-grey-mid) !important;
+    line-height: 1.65 !important;
+  }
+
+  /* ══════════════════════════════════════
+     FM PRICING — Featured dark card + white card (matches Pricing.txt)
+     ══════════════════════════════════════ */
+  .gai-fm__pricing {
+    padding: 100px 24px 60px;
+    background: var(--gai-white);
+  }
+
+  .gai-fm__pricing-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .gai-fm__pricing-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 72px;
+  }
+
+  .gai-fm__pricing-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--gai-font);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gai-dark);
+    margin-bottom: 24px;
+  }
+
+  .gai-fm__pricing-label::before,
+  .gai-fm__pricing-label::after {
+    content: '';
+    display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--gai-teal);
+    opacity: 0.5;
+  }
+
+  .gai-fm__pricing-title {
+    font-family: var(--gai-font) !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.15 !important;
+    color: var(--gai-charcoal) !important;
+    margin-bottom: 20px !important;
+  }
+
+  .gai-fm__pricing-title strong {
+    font-weight: 700 !important;
+  }
+
+  .gai-fm__pricing-subtitle {
+    font-family: var(--gai-font) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    color: var(--gai-grey-mid) !important;
+    max-width: 720px;
+    margin: 0 auto !important;
+  }
+
+  .gai-fm__pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ── Card base ── */
+  .gai-fm__card {
+    background: var(--gai-white);
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 30px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    height: 100%;
+  }
+
+  .gai-fm__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.1);
+  }
+
+  /* ── Featured dark card ── */
+  .gai-fm__card--featured {
+    background: var(--gai-charcoal);
+    border-color: transparent;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 30px rgba(0,0,0,0.12), 0 30px 60px rgba(0,0,0,0.08);
+  }
+
+  .gai-fm__card--featured::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(77,208,200,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .gai-fm__card--featured:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 16px 48px rgba(0,0,0,0.15), 0 30px 60px rgba(0,0,0,0.1);
+  }
+
+  .gai-fm__card-content {
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Badge ── */
+  .gai-fm__card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gai-teal-glow);
+    color: var(--gai-teal-muted);
+    font-family: var(--gai-font);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 40px;
+    width: fit-content;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-badge {
+    background: rgba(77,208,200,0.15);
+    color: var(--gai-teal);
+  }
+
+  /* ── Card name ── */
+  .gai-fm__card-name {
+    font-family: var(--gai-font) !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: var(--gai-charcoal) !important;
+    margin-bottom: 8px !important;
+    line-height: 1.2 !important;
+    min-height: 40px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-name {
+    color: #ffffff !important;
+  }
+
+  /* ── Card desc ── */
+  .gai-fm__card-desc {
+    font-family: var(--gai-font) !important;
+    font-size: 0.85rem !important;
+    color: var(--gai-grey-mid) !important;
+    line-height: 1.6 !important;
+    margin-bottom: 28px !important;
+    min-height: 68px;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-desc {
+    color: var(--gai-grey-light) !important;
+  }
+
+  /* ── Price ── */
+  .gai-fm__card-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .gai-fm__card-currency {
+    font-family: var(--gai-font);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gai-charcoal);
+    align-self: flex-start;
+    margin-top: 6px;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-currency {
+    color: #ffffff;
+  }
+
+  .gai-fm__card-price {
+    font-family: var(--gai-font) !important;
+    font-size: 3.2rem !important;
+    font-weight: 700 !important;
+    color: var(--gai-charcoal) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.02em;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-price {
+    color: #ffffff !important;
+  }
+
+  .gai-fm__card-original {
+    font-family: var(--gai-font) !important;
+    font-size: 1.1rem !important;
+    color: var(--gai-grey-mid) !important;
+    text-decoration: line-through;
+    margin-left: 12px;
+    align-self: flex-end;
+    margin-bottom: 8px;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-original {
+    color: rgba(255,255,255,0.4) !important;
+  }
+
+  .gai-fm__card-price-note {
+    font-family: var(--gai-font) !important;
+    font-size: 0.78rem !important;
+    color: var(--gai-grey-light) !important;
+    margin-bottom: 28px !important;
+  }
+
+  /* ── Features ── */
+  .gai-fm__card-features {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 auto 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 260px;
+  }
+
+  .gai-fm__card-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    list-style: none !important;
+  }
+
+  .gai-fm__card-feature::before { display: none !important; }
+
+  .gai-fm__card-feature-icon {
+    width: 18px; height: 18px; min-width: 18px;
+    border-radius: 50%;
+    background: var(--gai-teal-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-feature-icon {
+    background: rgba(77,208,200,0.15);
+  }
+
+  .gai-fm__card-feature-icon svg {
+    width: 10px; height: 10px;
+    color: var(--gai-teal-muted);
+  }
+
+  .gai-fm__card--featured .gai-fm__card-feature-icon svg {
+    color: var(--gai-teal);
+  }
+
+  .gai-fm__card-feature-text {
+    font-family: var(--gai-font) !important;
+    font-size: 0.85rem !important;
+    color: var(--gai-charcoal) !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+  }
+
+  .gai-fm__card--featured .gai-fm__card-feature-text {
+    color: var(--gai-grey-light) !important;
+  }
+
+  /* ── CTA ── */
+  .gai-fm__card-cta-wrap {
+    margin-top: 32px;
+  }
+
+  .gai-fm__card-cta {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 28px !important;
+    font-family: var(--gai-font) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border-radius: 60px !important;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    line-height: 1.4 !important;
+  }
+
+  .gai-fm__card-cta svg {
+    width: 14px; height: 14px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .gai-fm__card-cta:hover svg {
+    transform: translateX(3px);
+  }
+
+  .gai-fm__card-cta--outline {
+    background: transparent !important;
+    color: var(--gai-charcoal) !important;
+    border: 1.5px solid var(--gai-teal) !important;
+  }
+
+  .gai-fm__card-cta--outline:hover {
+    background: var(--gai-teal) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(77,208,200,0.25);
+    color: var(--gai-charcoal) !important;
+  }
+
+  .gai-fm__card-cta--filled {
+    background: var(--gai-teal) !important;
+    border: none !important;
+    color: var(--gai-charcoal) !important;
+    box-shadow: 0 4px 20px rgba(77,208,200,0.3);
+  }
+
+  .gai-fm__card-cta--filled:hover {
+    background: var(--gai-teal-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(77,208,200,0.4);
+    color: var(--gai-charcoal) !important;
+  }
+
+  .gai-fm__card-guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-family: var(--gai-font);
+    font-size: 0.7rem;
+    color: var(--gai-grey-light);
+  }
+
+  .gai-fm__card-guarantee svg {
+    width: 12px; height: 12px;
+    color: var(--gai-teal);
+    flex-shrink: 0;
+  }
+
+  .gai-fm__card-deadline {
+    font-family: var(--gai-font);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gai-teal);
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  /* ══════════════════════════════════════
+     DISCOUNT-ONLY (secondary, off-white bg like gai-s3)
+     ══════════════════════════════════════ */
+  .gai-fm__discount {
+    padding: 60px 24px 100px;
+    background: var(--gai-off-white);
+  }
+
+  .gai-fm__discount-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .gai-fm__discount-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .gai-fm__discount-label {
+    font-family: var(--gai-font) !important;
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gai-grey-light) !important;
+    margin-bottom: 12px !important;
+  }
+
+  .gai-fm__discount-title {
+    font-family: var(--gai-font) !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    color: var(--gai-charcoal) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .gai-fm__discount-sub {
+    font-family: var(--gai-font) !important;
+    font-size: 0.92rem !important;
+    color: var(--gai-grey-mid) !important;
+    line-height: 1.6 !important;
+  }
+
+  .gai-fm__discount-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .gai-fm__discount-item {
+    background: var(--gai-white);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .gai-fm__discount-item:hover {
+    border-color: rgba(77,208,200,0.25);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+  }
+
+  .gai-fm__discount-name {
+    font-family: var(--gai-font) !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    color: var(--gai-charcoal) !important;
+    margin-bottom: 12px !important;
+  }
+
+  .gai-fm__discount-price {
+    font-family: var(--gai-font) !important;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gai-charcoal);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .gai-fm__discount-original {
+    font-family: var(--gai-font) !important;
+    font-size: 0.78rem;
+    color: var(--gai-grey-light);
+    text-decoration: line-through;
+    margin-bottom: 16px;
+  }
+
+  .gai-fm__discount-desc {
+    font-family: var(--gai-font) !important;
+    font-size: 0.82rem;
+    color: var(--gai-grey-mid);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .gai-fm__discount-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--gai-font) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: var(--gai-teal-dark) !important;
+    text-decoration: none !important;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+  }
+
+  .gai-fm__discount-cta:hover {
+    color: var(--gai-teal-muted) !important;
+  }
+
+  .gai-fm__discount-cta svg {
+    width: 16px; height: 16px;
+    transition: transform 0.25s ease;
+  }
+
+  .gai-fm__discount-cta:hover svg {
+    transform: translateX(4px);
+  }
+
+  .gai-fm__discount-note {
+    font-family: var(--gai-font) !important;
+    font-size: 0.7rem;
+    color: var(--gai-grey-light);
+    margin-top: 12px;
+    font-style: italic;
+  }
+
+  .gai-fm__discount-upgrade {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: var(--gai-teal-glow);
+    border: 1px solid rgba(77,208,200,0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .gai-fm__discount-upgrade-icon {
+    width: 28px; height: 28px; min-width: 28px;
+    border-radius: 8px;
+    background: rgba(77,208,200,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gai-fm__discount-upgrade-icon svg {
+    width: 13px; height: 13px;
+    color: var(--gai-teal-muted);
+  }
+
+  .gai-fm__discount-upgrade-text {
+    font-family: var(--gai-font) !important;
+    font-size: 0.8rem !important;
+    color: var(--gai-dark) !important;
+    line-height: 1.55 !important;
+  }
+
+  .gai-fm__discount-upgrade-text strong {
+    font-weight: 600;
+    color: var(--gai-charcoal);
+  }
+
+  /* ══════════════════════════════════════
+     UPCOMING PRODUCTS
+     ══════════════════════════════════════ */
+  .gai-fm__upcoming {
+    background: var(--gai-charcoal);
+    padding: 100px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gai-fm__upcoming::before {
+    content: '';
+    position: absolute;
+    bottom: -120px; left: -120px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(77,208,200,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .gai-fm__upcoming-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .gai-fm__upcoming-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 72px;
+  }
+
+  .gai-fm__upcoming-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--gai-font);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gai-cyan);
+    margin-bottom: 24px;
+  }
+
+  .gai-fm__upcoming-label::before,
+  .gai-fm__upcoming-label::after {
+    content: '';
+    display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--gai-teal);
+    opacity: 0.4;
+  }
+
+  .gai-fm__upcoming-title {
+    font-family: var(--gai-font) !important;
+    font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    margin-bottom: 20px !important;
+  }
+
+  .gai-fm__upcoming-title strong {
+    font-weight: 800 !important;
+  }
+
+  .gai-fm__upcoming-sub {
+    font-family: var(--gai-font) !important;
+    font-size: 1rem !important;
+    color: var(--gai-grey-light) !important;
+    line-height: 1.7 !important;
+  }
+
+  .gai-fm__upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .gai-fm__upcoming-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 32px 28px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .gai-fm__upcoming-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(77,208,200,0.2);
+    transform: translateY(-3px);
+  }
+
+  .gai-fm__upcoming-card--invite {
+    opacity: 0.6;
+  }
+
+  .gai-fm__upcoming-card-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--gai-font);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+  }
+
+  .gai-fm__upcoming-card-tag--founders {
+    background: rgba(77,208,200,0.15);
+    color: var(--gai-teal);
+  }
+
+  .gai-fm__upcoming-card-tag--invite {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.4);
+  }
+
+  .gai-fm__upcoming-card-name {
+    font-family: var(--gai-font) !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin-bottom: 6px !important;
+    letter-spacing: -0.01em;
+  }
+
+  .gai-fm__upcoming-card-tagline {
+    font-family: var(--gai-font) !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    color: var(--gai-teal) !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px !important;
+  }
+
+  .gai-fm__upcoming-card-desc {
+    font-family: var(--gai-font) !important;
+    font-size: 0.87rem !important;
+    color: var(--gai-grey-light) !important;
+    line-height: 1.65 !important;
+  }
+
+  .gai-fm__upcoming-card-type {
+    font-family: var(--gai-font);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .gai-fm__upcoming-note {
+    text-align: center;
+    margin-top: 40px;
+    font-family: var(--gai-font);
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.3);
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .gai-fm__upcoming-grid { grid-template-columns: 1fr; }
+  }
+
+  .gai-fm__sparkscore {
+    background: var(--gai-charcoal);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .gai-fm__sparkscore-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .gai-fm__sparkscore-icon {
+    width: 40px; height: 40px; min-width: 40px;
+    border-radius: 12px;
+    background: rgba(77,208,200,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gai-fm__sparkscore-icon svg {
+    width: 18px; height: 18px;
+    color: var(--gai-teal);
+  }
+
+  .gai-fm__sparkscore-heading {
+    font-family: var(--gai-font) !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin-bottom: 4px !important;
+  }
+
+  .gai-fm__sparkscore-desc {
+    font-family: var(--gai-font) !important;
+    font-size: 0.8rem !important;
+    color: var(--gai-grey-light) !important;
+    line-height: 1.5 !important;
+  }
+
+  .gai-fm__sparkscore-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--gai-font) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: var(--gai-charcoal) !important;
+    background: var(--gai-cyan);
+    text-decoration: none !important;
+    padding: 10px 20px;
+    border-radius: 40px;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+  }
+
+  .gai-fm__sparkscore-cta:hover {
+    background: var(--gai-teal);
+    color: #ffffff !important;
+  }
+
+  .gai-fm__sparkscore-cta svg {
+    width: 14px; height: 14px;
+    transition: transform 0.25s ease;
+  }
+
+  .gai-fm__sparkscore-cta:hover svg {
+    transform: translateX(3px);
+  }
+
+  /* ══════════════════════════════════════
+     RESEARCH + FOOTER
+     ══════════════════════════════════════ */
+  .gai-fm__research {
+    padding: 48px 24px;
+    background: var(--gai-white);
+    text-align: center;
+  }
+
+  .gai-fm__research-text {
+    font-family: var(--gai-font) !important;
+    font-size: 0.78rem;
+    color: var(--gai-grey-mid);
+  }
+
+  .gai-fm__footer {
+    background: var(--gai-charcoal);
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .gai-fm__footer-text {
+    font-family: var(--gai-font) !important;
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+
+  .gai-fm__footer-link {
+    font-family: var(--gai-font) !important;
+    font-size: 0.85rem;
+    color: var(--gai-cyan) !important;
+    text-decoration: none !important;
+  }
+
+  .gai-fm__footer-link:hover {
+    text-decoration: underline !important;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .gai-fm__upcoming-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .gai-fm__benefits-grid,
+    .gai-fm__pricing-cards,
+    .gai-fm__discount-grid {
+      grid-template-columns: 1fr;
+    }
+    .gai-fm__upcoming-grid { grid-template-columns: 1fr; }
+    .gai-fm__pricing-cards {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .gai-fm__proof {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .gai-fm__proof-div { display: none; }
+  }
+
+  /* ══════════════════════════════════════
+     WHAT YOU'RE JOINING — Membership section
+     ══════════════════════════════════════ */
+  .gai-fm__membership {
+    background: var(--gai-off-white);
+    padding: 80px 24px;
+  }
+
+  .gai-fm__membership-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gai-fm__membership-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--gai-font);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gai-teal-muted);
+    margin-bottom: 28px;
+  }
+
+  .gai-fm__membership-label::before,
+  .gai-fm__membership-label::after {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gai-teal);
+    opacity: 0.5;
+  }
+
+  .gai-fm__membership-title {
+    font-family: var(--gai-font);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--gai-charcoal);
+    margin-bottom: 28px;
+  }
+
+  .gai-fm__membership-title strong {
+    font-weight: 800;
+  }
+
+  .gai-fm__membership-desc {
+    font-family: var(--gai-font);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--gai-dark);
+    max-width: 640px;
+    margin: 0 auto 20px;
+  }
+
+  .gai-fm__membership-note {
+    font-family: var(--gai-font);
+    font-size: 0.85rem;
+    color: var(--gai-grey-mid);
+    font-style: italic;
+  }
+
+  /* ── Elite card divider ── */
+  .gai-fm__card-elite-divider {
+    margin: 20px 0 16px;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    padding-top: 20px;
+  }
+
+  .gai-fm__card-elite-label {
+    font-family: var(--gai-font);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gai-teal-muted);
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 600px) {
+    .gai-fm__hero { padding: 64px 16px 72px; }
+    .gai-fm__benefits { padding: 48px 16px 72px; }
+    .gai-fm__pricing { padding: 60px 16px 48px; }
+    .gai-fm__discount { padding: 48px 16px 72px; }
+    .gai-fm__card-content { padding: 32px 24px; }
+    .gai-fm__membership { padding: 48px 16px; }
+  }
